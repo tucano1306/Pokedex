@@ -16,6 +16,6 @@ module.exports = {
         'off',
         { allowConstantExports: true },
       ],
-      'react/prop-types': 'off', // Esto desactivará la advertencia de prop-types
+      'react/prop-types': 'off', 
     },
   }

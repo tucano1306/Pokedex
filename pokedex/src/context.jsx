@@ -32,7 +32,7 @@ function reducer(state, action) {
   }
 }
 
-// Cambiamos a export normal en lugar de default
+
 export function PokemonProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, {
     currentPage: 'home',
