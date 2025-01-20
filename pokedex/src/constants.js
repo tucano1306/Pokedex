@@ -1,0 +1,7 @@
+// src/constants.js
+export const ACTIONS = {
+    SET_TRAINER: 'SET_TRAINER',
+    SET_PAGE: 'SET_PAGE',
+    SET_POKEMONS: 'SET_POKEMONS',
+    SET_CURRENT_POKEMON: 'SET_CURRENT_POKEMON'
+  };
