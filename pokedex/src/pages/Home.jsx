@@ -1,14 +1,17 @@
 import { useState } from 'react';
-import { usePokemon } from './context';
+import { useNavigate } from 'react-router-dom';
+import { usePokemon } from '../context/PokemonContext';
 
-const Home = () => {
+export default function Home() {
   const [inputName, setInputName] = useState('');
   const { setTrainer } = usePokemon();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputName.trim()) {
       setTrainer(inputName);
+      navigate('/pokedex');
     }
   };
 
@@ -60,6 +63,4 @@ const Home = () => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}
