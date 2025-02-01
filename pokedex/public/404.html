@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokédex</title>
+    <script type="text/javascript">
+      var pathSegments = location.pathname.split('/');
+      var redirectPath = pathSegments.slice(1).join('/');
+      location.replace(location.origin + '/' + redirectPath);
+    </script>
+  </head>
+  <body></body>
+</html>
