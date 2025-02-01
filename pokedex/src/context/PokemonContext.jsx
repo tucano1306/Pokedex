@@ -53,7 +53,14 @@ export function PokemonProvider({ children }) {
             id: detail.id,
             name: detail.name,
             types: detail.types,
-            sprite: detail.sprites.front_default
+            sprite: detail.sprites.front_default,
+            
+            hp: detail.stats.find(stat => stat.stat.name === 'hp')?.base_stat,
+            attack: detail.stats.find(stat => stat.stat.name === 'attack')?.base_stat,
+            defense: detail.stats.find(stat => stat.stat.name === 'defense')?.base_stat,
+            speed: detail.stats.find(stat => stat.stat.name === 'speed')?.base_stat,
+            
+            stats: detail.stats
           };
         })
       );
@@ -73,7 +80,7 @@ export function PokemonProvider({ children }) {
   };
 
   return (
-    <PokemonContext.Provider 
+    <PokemonContext.Provider
       value={{
         ...state,
         setTrainer,

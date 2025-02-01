@@ -19,7 +19,7 @@
   }
   
   .animate-pokemon-selected {
-    animation: selectedPokemon 0.7s forwards;
+    animation: selectedPokemon 5.5s forwards;
   }
   
   .rotate-360 {
